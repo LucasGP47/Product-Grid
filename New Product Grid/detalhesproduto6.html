@@ -163,7 +163,7 @@
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Centraliza o conteúdo horizontalmente */
             align-items: center;
             flex-shrink: 0;
             position: fixed;
@@ -175,93 +175,12 @@
         footer .logo {
             font-size: 1.5em;
             font-weight: bold;
-        }
-
-        footer nav {
-            gap: 20px;
+            margin-right: 20px; /* Espaço entre a logo e a informação de contato */
         }
 
         footer nav span {
             font-weight: bold;
-        }
-
-        footer nav span {
             font-size: 0.9em;
-        }
-
-        /* Estilos Responsivos */
-        @media (max-width: 600px) {
-            .header nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .product-details {
-                margin: 10px;
-                padding: 15px;
-            }
-
-            .thumbnails img {
-                width: 80px;
-            }
-
-            footer {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-        }
-
-        @media (min-width: 601px) and (max-width: 1024px) {
-            .header nav {
-                gap: 15px;
-            }
-
-            .product-details {
-                margin: 15px;
-                padding: 18px;
-            }
-
-            .thumbnails img {
-                width: 90px;
-            }
-        }
-
-        @media (min-width: 1025px) {
-            .product-details {
-                margin: 20px auto;
-                padding: 20px;
-            }
-
-            .thumbnails img {
-                width: 100px;
-            }
-
-            footer {
-                justify-content: space-between;
-            }
-        }
-
-        @media (min-width: 1281px) {
-            .header .logo, footer .logo {
-                font-size: 2em;
-            }
-
-            .header nav a {
-                font-size: 1.2em;
-            }
-
-            .product-info h2 {
-                font-size: 2em;
-            }
-
-            .technical-specs h3 {
-                font-size: 1.5em;
-            }
-
-            footer .logo {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
@@ -283,9 +202,9 @@
 
 <div class="product-details">
     <div class="thumbnails">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185201-800-auto.webp" alt="Thumbnail 1" onclick="selectImage(this)">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185202-800-auto.webp" alt="Thumbnail 2" onclick="selectImage(this)">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185205-800-auto.webp" alt="Thumbnail 3" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-galaxy-watch5-pro-sm-r920nzkpzto-533186009.avif" alt="Thumbnail 1" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-galaxy-watch5-pro-sm-r920nzkpzto-533186010.avif" alt="Thumbnail 2" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-galaxy-watch5-pro-sm-r920nzkpzto-533186020.avif" alt="Thumbnail 3" onclick="selectImage(this)">
     </div>
     <div class="main-image">
         <img id="mainImage" src="Caminho/Para/FotoPrincipal.jpg" alt="Foto Principal">
@@ -293,18 +212,17 @@
 
     <div class="product-info">
         <h2>Produto 1</h2>
-        <p><strong>Modelo:</strong> Geladeira Family Hub™ Side By Side RS58 com Soundbar 585L Black Inox 220V</p>
-        <p><strong>Valor:</strong> R$ 17.999,00</p>
+        <p><strong>Modelo:</strong> Galaxy Watch5 Pro Bluetooth (45mm)</p>
+        <p><strong>Valor:</strong> R$ 1.799,10</p>
     </div>
 
     <div class="technical-specs">
         <h3>Ficha Técnica</h3>
         <ul>
-            <li><strong>Voltagem:</strong> 220</li>
-            <li><strong>Serviço de Instalação:</strong> INCLUSO</li>
-            <li><strong>Capacidade:</strong> 585L</li>
-            <li><strong>Contém painel inteligente</strong></li>
-            <li><strong>Cor:</strong> Black Inox</li>
+            <li><strong>Tamanho:</strong> 44 mm | 40 mm</li>
+            <li><strong>Peso:</strong> 33.5 g | 28.7 g</li>
+            <li><strong>Material:</strong> Armor Aluminum</li>
+            <li><strong>Bateria:</strong> 590mAh</li>
         </ul>
     </div>
 </div>
@@ -312,9 +230,8 @@
 <footer>
     <div class="logo">Contato</div>
     <nav class="contact-info">
-        <span>Telefone: (11) 1234-5678</span>
-        <span>Email: contato@eletronicos.com</span>
-        <span>Endereço: Em Lugar Algum, 123 - São Paulo, SP</span>
+        <span>Telefone: (11) 1234-5678</span><br>
+        <span>Email: support@elec.com</span>
     </nav>
 </footer>
 

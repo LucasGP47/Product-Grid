@@ -101,7 +101,7 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 20px;
-            transition: opacity 0.5s ease-in-out; /* Transição suave */
+            transition: opacity 0.5s ease-in-out; 
         }
 
         .product-info {
@@ -163,7 +163,7 @@
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-shrink: 0;
             position: fixed;
@@ -175,17 +175,11 @@
         footer .logo {
             font-size: 1.5em;
             font-weight: bold;
-        }
-
-        footer nav {
-            gap: 20px;
+            margin-right: 20px; 
         }
 
         footer nav span {
             font-weight: bold;
-        }
-
-        footer nav span {
             font-size: 0.9em;
         }
     </style>
@@ -194,15 +188,6 @@
 
 <div class="header">
     <div class="logo">Eletronicos</div>
-    <nav>
-        <a href="#">Mobile</a>
-        <a href="#">TV & AV</a>
-        <a href="#">Eletrodomésticos</a>
-        <a href="#">Ar-Condicionado</a>
-        <a href="#">Informática</a>
-        <a href="#">Monitores</a>
-        <a href="#">Suporte</a>
-    </nav>
     <div class="user-actions">
         <span id="userMenuToggle">Olá Usuário</span>
         <i class="fas fa-user"></i>
@@ -217,10 +202,9 @@
 
 <div class="product-details">
     <div class="thumbnails">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\215663-800-auto.webp" alt="Thumbnail 1" onclick="selectImage(this)">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\215664-800-auto.webp" alt="Thumbnail 2" onclick="selectImage(this)">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\215665-800-auto.webp" alt="Thumbnail 3" onclick="selectImage(this)">
-        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\215667-800-auto.webp" alt="Thumbnail 3" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-front-loading-washer-ww80t504dawst-ww13t504dbn-az-539918644.avif" alt="Thumbnail 1" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-front-loading-washer-ww80t504dawst-ww13t504dbn-az-539918645.avif" alt="Thumbnail 2" onclick="selectImage(this)">
+        <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\br-front-loading-washer-ww80t504dawst-ww13t504dbn-az-539918663.avif" alt="Thumbnail 3" onclick="selectImage(this)">
     </div>
     <div class="main-image">
         <img id="mainImage" src="Caminho/Para/FotoPrincipal.jpg" alt="Foto Principal">
@@ -228,18 +212,17 @@
 
     <div class="product-info">
         <h2>Produto 1</h2>
-        <p><strong>Modelo:</strong> Notebook Samsung Galaxy Book3 Ultra</p>
-        <p><strong>Valor:</strong> R$ 15.704,10</p>
+        <p><strong>Modelo:</strong> Lavadora Smart WW13T</p>
+        <p><strong>Valor:</strong> R$ 3.999,00</p>
     </div>
 
     <div class="technical-specs">
         <h3>Ficha Técnica</h3>
         <ul>
-            <li><strong>Processador:</strong> Intel®Core™ i9</li>
-            <li><strong>Memória RAM:</strong> 32GB</li>
-            <li><strong>Armazenamento:</strong> 1TB de SSD</li>
-            <li><strong>Tela:</strong> 16" - AMOLED 2x</li>
-            <li><strong>Placa Gráfica:</strong> NVIDIA® GeForce® RTX4070 Graphics</li>
+            <li><strong>Capacidade:</strong> 13KG</li>
+            <li><strong>Voltagem:</strong> 220V</li>
+            <li><strong>Material:</strong> Inox</li>
+            <li><strong>Conectividade:</strong> Incluso</li>
         </ul>
     </div>
 </div>
@@ -247,9 +230,8 @@
 <footer>
     <div class="logo">Contato</div>
     <nav class="contact-info">
-        <span>Telefone: (11) 1234-5678</span>
-        <span>Email: contato@eletronicos.com</span>
-        <span>Endereço: Em Lugar Algum, 123 - São Paulo, SP</span>
+        <span>Telefone: (11) 1234-5678</span><br>
+        <span>Email: support@elec.com</span>
     </nav>
 </footer>
 
@@ -263,7 +245,7 @@
             setTimeout(function() {
                 mainImage.src = newImageSrc;
                 mainImage.style.opacity = '1'; 
-            }, 500); // Tempo de transição mais suave
+            }, 500); 
         }
     }
 
