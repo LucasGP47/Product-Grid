@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header, footer {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header .logo, footer .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .header nav, footer nav {
+            gap: 20px;
+        }
+
+        .header nav a, footer nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .header .user-actions, footer .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .user-actions span, footer .contact-info span {
+            font-weight: bold;
+        }
+
+        .header .user-actions i, footer .contact-info i {
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 50px auto;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            flex-grow: 1;
+            border-radius: 10px;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            background-color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .carousel-item h3 {
+            margin: 15px 0 10px;
+            color: #000;
+        }
+
+        .carousel-item p {
+            color: #333;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .promotion-banner {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .promotion-banner h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .promotion-banner p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .promotion-banner .discount {
+            font-size: 2em;
+            color: #ff0;
+        }
+
+        .promotion-banner .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .promotion-banner .cta-button:hover {
+            background-color: #333;
+        }
+
+        @media screen and (max-width: 767px) {
+            .carousel {
+                margin: 20px auto;
+            }
+
+            .carousel-item {
+                padding: 10px;
+            }
+
+            .carousel-item h3 {
+                font-size: 1.5em;
+            }
+
+            .carousel-item p {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">Eletronicos</div>
+    <div class="user-actions">
+        <span>Olá Usuário</span>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</div>
+
+<div class="promotion-banner">
+    <h2>Ver Produtos</h2>
+    <a href="grid.html" class="cta-button">Ver lista de produtos</a>
+</div>
+
+<div class="carousel">
+    <div class="carousel-inner">
+        <button class="carousel-item" onclick="window.location.href = 'detalhesproduto1.html';">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\celulares.webp" alt="Produto 1">
+            <h3>Linha S23</h3>
+            <p>Conforto e qualidade para todos</p>
+        </button>
+        <button class="carousel-item" onclick="window.location.href = 'detalhesProduto2.html?produto=2';">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185096-800-auto.webp" alt="Produto 2">
+            <h3>Galaxy Buds Live Preto</h3>
+            <p>Todas as batidas na palma de sua mão</p>
+        </button>
+        <button class="carousel-item" onclick="window.location.href = 'detalhesProduto3.html?produto=2';">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\215663-800-auto.webp" alt="Produto 3">
+            <h3>Notebook Samsung Galaxy Book3 Ultra</h3>
+            <p>Um titã enjaulado em plástico</p>
+        </button>
+    </div>
+    <div class="carousel-controls">
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+</div>
+
+<footer>
+    <div class="logo">Contato</div>
+    <nav class="contact-info">
+        <span>Telefone: (11) 1234-5678</span>
+    </nav>
+</footer>
+
+<script>
+    const carouselInner = document.querySelector('.carousel-inner');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const width = carouselInner.clientWidth;
+        carouselInner.style.transform = `translateX(${-width * currentIndex}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselInner.children.length - 1;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselInner.children.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+</script>
+
+</body>
+</html>

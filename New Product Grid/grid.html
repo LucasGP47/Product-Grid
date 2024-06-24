@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        .header, footer {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .header {
+            top: 0;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        .header .logo, footer .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .header nav, footer nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header nav a, footer nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .header .user-actions, footer .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header .user-actions span, footer .contact-info span {
+            font-weight: bold;
+        }
+
+        .header .user-actions i, footer .contact-info i {
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .products-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-content: center; /* Centraliza o grid */
+            width: 100%;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #000;
+        }
+
+        .product-card p {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card .price {
+            font-size: 1.5em;
+            color: #000;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-card .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .product-card .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .product-card .cta-button:hover {
+            background-color: #333;
+        }
+
+        @media screen and (min-width: 768px) {
+            .header nav {
+                display: flex;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">Eletronicos</div>
+    <div class="user-actions">
+        <span>Olá Usuário</span>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+</div>
+
+<div class="products-container">
+    <div class="products-grid">
+        <div class="product-card">
+            <img src="imagens/celulares.webp" alt="Galaxy S23 FE">
+            <h3>Galaxy S23 FE 256GB</h3>
+            <p>SM-S711BLGJZTO</p>
+            <p>256 GB</p>
+            <p class="price">R$ 4.049,10 à vista</p>
+            <p class="old-price">R$ 5.299,00</p>
+            <a href="detalhesProduto1.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="imagens/notebook.jpg" alt="Notebook Samsung Galaxy Book3 Ultra">
+            <h3>Notebook Samsung Galaxy Book3 Ultra</h3>
+            <p>Intel®Core™ i9, 32GB RAM, 1TB SSD</p>
+            <p>16" - AMOLED 2x, NVIDIA® GeForce® RTX4070 Graphics</p>
+            <p class="price">R$ 15.704,10 à vista</p>
+            <p class="old-price">R$ 19.999,00</p>
+            <a href="detalhesProduto3.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="imagens/185096-800-auto.webp" alt="Galaxy Buds Live Preto">
+            <h3>Galaxy Buds Live Preto</h3>
+            <p>Som ambiente, ANC, 60 horas de bateria</p>
+            <p class="price">R$ 1.169,10 à vista</p>
+            <p class="old-price">R$ 1.499,00</p>
+            <a href="detalhesProduto2.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="imagens/tv.jpg" alt="Samsung QLED 4K">
+            <h3>Samsung QLED 4K</h3>
+            <p>Modelo 2023, 55"</p>
+            <p class="price">R$ 5.509,05 à vista</p>
+            <p class="old-price">R$ 8.899,00</p>
+            <a href="detalhesProduto4.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185201-800-auto.webp" alt="Refrigerador Samsung">
+            <h3>Refrigerador Samsung</h3>
+            <p>Duplex, 500L, Inox</p>
+            <p class="price">R$ 17.999,00 à vista</p>
+            <p class="old-price">R$ 23.868,90</p>
+            <a href="detalhesProduto5.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185201-800-auto.webp" alt="Refrigerador Samsung">
+            <h3>Refrigerador Samsung</h3>
+            <p>Duplex, 500L, Inox</p>
+            <p class="price">R$ 17.999,00 à vista</p>
+            <p class="old-price">R$ 23.868,90</p>
+            <a href="detalhesProduto5.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185201-800-auto.webp" alt="Refrigerador Samsung">
+            <h3>Refrigerador Samsung</h3>
+            <p>Duplex, 500L, Inox</p>
+            <p class="price">R$ 17.999,00 à vista</p>
+            <p class="old-price">R$ 23.868,90</p>
+            <a href="detalhesProduto5.html" class="cta-button">Detalhes</a>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\lucas\OneDrive\Documentos\New Product Grid\imagens\185201-800-auto.webp" alt="Refrigerador Samsung">
+            <h3>Refrigerador Samsung</h3>
+            <p>Duplex, 500L, Inox</p>
+            <p class="price">R$ 17.999,00 à vista</p>
+            <p class="old-price">R$ 23.868,90</p>
+            <a href="detalhesProduto5.html" class="cta-button">Detalhes</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="logo">Contato</div>
+    <div class="contact-info">
+        <span>(11) 1234-5678</span>
+        <i class="fas fa-envelope"></i>
+    </div>
+</footer>
+
+</body>
+</html>
